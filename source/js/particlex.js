@@ -55,7 +55,7 @@ const App = Vue.createApp({
     methods: {
         home_click() {
             window.scrollTo({
-                top: window.innerHeight,
+                top: window.innerHeight * 0.3 + 50,
                 behavior: "smooth",
             });
         },

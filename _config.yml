@@ -14,6 +14,8 @@ home_background:
 # MDN: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 vf_fonts_enable: false
 
+post_list_description: true
+
 # ParticleX theme icon is adopts the font awesome 6
 # Link: https://fontawesome.com/search/
 

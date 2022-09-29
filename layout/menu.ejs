@@ -2,7 +2,16 @@
 <nav id="menu">
     <div class="desktop-menu">
         <a href="<%- rootlink %>">
-            <span class="title"><%- config.title %></span>
+
+
+            <span class="title"> <img src="<%- theme.head_img %>" alt="avatar" style="
+    left: -0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    top: auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;"><%- config.title %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
         <a href="<%= url_for(theme.menu[key].src) %>">
@@ -15,7 +24,15 @@
         <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
         <div :class="'title'" @click="menu_show = !menu_show">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;<%- config.title %></span>
+            <span>&emsp;
+                <%- config.title %><img src="<%- theme.head_img %>" alt="avatar" style="
+    padding-left: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    top: auto;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;"></span>
         </div>
         <transition name="slide">
         <div class="items" v-show="menu_show">

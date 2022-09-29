@@ -24,12 +24,14 @@
     </div>
     <div class="excerpt">
         <div class="content" v-pre>
-            <% if (post.description) { %>
-            <%- markdown(post.description) %>
-            <% } else if (post.excerpt.length != 0) { %>
-            <%- post.excerpt %>
-            <% } else { %>
-            <%- post.content %>
+            <% if (theme.post_list_description !== false) { %>
+                <% if (post.description) { %>
+                <%- markdown(post.description) %>
+                <% } else if (post.excerpt.length != 0) { %>
+                <%- post.excerpt %>
+                <% } else { %>
+                <%- post.content %>
+                <% } %>
             <% } %>
         </div>
     </div>
@@ -51,6 +53,13 @@
         </span>
         <% }); %>
     </div>
-    <a href="<%- rootlink %><%- post.path %>" class="go-post">記事全文を読む</a>
+        <% if(post.tags.data.find(t => t.name === "qiita")){ %>
+            <a href="<%- rootlink %><%- post.path %>" class="go-post">Qiitaで読む</a>
+        <%}else if(post.tags.data.find(t => t.name === "zenn")){%>
+            <a href="<%- rootlink %><%- post.path %>" class="go-post">Zennで読む</a>
+        <%}else {%>
+            <a href="<%- rootlink %><%- post.path %>" class="go-post">記事全文を読む</a>
+        <%}%>
+
 </div>
 <% }); %>
