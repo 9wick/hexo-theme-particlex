@@ -559,7 +559,7 @@ pre .copycode {
     text-align: center;
 }
 #home-posts .page-current .page-index {
-    width: 300px;
+    /*width: 300px;*/
     text-align: center;
     font-weight: bold;
 }
