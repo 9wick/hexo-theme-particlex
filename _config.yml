@@ -29,10 +29,6 @@ menu:
         name: id-card
         theme: solid
         src: /about
-    archives:
-        name: box-archive
-        theme: solid
-        src: /archives
     categories:
         name: bookmark
         theme: solid
@@ -50,7 +46,7 @@ menu:
 # side info card
 card:
     enable: true
-    description: ["Description..."] # You can add more
+    description: [] # You can add more
     icon_links:
         []
         # Example:

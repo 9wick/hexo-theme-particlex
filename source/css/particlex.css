@@ -346,7 +346,7 @@ pre .copycode {
 }
 #home-head {
     width: 100%;
-    height: calc(30vh + 50px);
+    height: max(calc(30vh + 50px), 300px);
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1341,7 +1341,7 @@ footer .footer-icon {
         position: absolute;
         width: 350px;
         height: 350px;
-        display: none;
+        /*display: none;*/
     }
     #home-head .home-info .info {
         display: -webkit-box;

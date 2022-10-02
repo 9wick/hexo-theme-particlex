@@ -27,22 +27,21 @@
 <html lang="<%- config.language %>">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <meta name="viewport" content=",initial-scale=1.0">
         <title><%= titlecase(pageTitle) %></title>
         <meta name="author" content="<%- config.author %>">
         <meta name="description" content="<%- config.description %>">
         <meta name="keywords" content="<%- config.keywords %>">
         <link rel="icon" href="<%- theme.head_img %>">
-        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
-        <script src="https://cdn.staticfile.org/font-awesome/6.2.0/js/all.min.js"></script>
+        <script src="<%- rootlink %>js/instantpage.min.js" type="module"></script>
+        <script src="<%- rootlink %>js/font-awesome.all.min.js"></script>
         <% if (theme.vf_fonts_enable) { %>
-        <link rel="stylesheet" href="<%- rootlink %>css/test/fonts.min.css">
         <link rel="stylesheet" href="<%- rootlink %>css/test/particlex.css">
         <% } else { %>
-        <link rel="stylesheet" href="<%- rootlink %>css/fonts.min.css">
         <link rel="stylesheet" href="<%- rootlink %>css/particlex.css">
         <% } %>
-        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+        <script src="<%- rootlink %>js/vue.global.prod.min.js"></script>
+        <%- open_graph({twitter_id: theme.twitter, image: theme.ogp_image}) %>
     </head>
     <body>
 <!--    <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">読み込みが遅すぎる場合は、キャッシュを無効にしてください (ブラウザはデフォルトで有効になっています)</p><div><img alt="loading" src="<%- rootlink %>loading.gif"></div></div></div></div></div>-->
@@ -67,7 +66,7 @@
                 <img id="img_content" alt="img_show">
             </div>
         </div>
-        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="<%- rootlink %>js/highlight.min.js"></script>
         <script src="<%- rootlink %>js/particlex.js"></script>
         <script src="<%- rootlink %>js/showimg.js"></script>
         <%- include("script") %>

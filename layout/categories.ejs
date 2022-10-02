@@ -25,9 +25,15 @@
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
-                <a href="<%- rootlink %><%- post.path %>">
-                    <h3><%= titlecase(post.title) %></h3>
-                </a>
+                <% if(post.redirect && (post.redirect.startsWith("http://") || post.redirect.startsWith("https://")) ){ %>
+                    <a href="<%- post.redirect %>">
+                        <h3><%= titlecase(post.title) %></h3>
+                    </a>
+                <% }else{ %>
+                    <a href="<%- rootlink %><%- post.path %>">
+                        <h3><%= titlecase(post.title) %></h3>
+                    </a>
+                <% } %>
                 <div class="info">
                     <% if (post.categories && post.categories.data.length != 0){ %>
                     <span class="category">

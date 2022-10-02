@@ -1,9 +1,15 @@
 <% var rootlink = config.root, current = (page.current - 1) * config.index_generator.per_page; %>
 <% site.posts.slice(0 + current, config.index_generator.per_page + current).forEach(function(post) { %>
 <div class="post">
-    <a href="<%- rootlink %><%- post.path %>">
-        <h2 class="post-title"><%= titlecase(post.title) %></h2>
-    </a>
+    <% if(post.redirect && (post.redirect.startsWith("http://") || post.redirect.startsWith("https://")) ){ %>
+        <a href="<%- post.redirect %>">
+            <h2 class="post-title"><%= titlecase(post.title) %></h2>
+        </a>
+    <% }else{ %>
+        <a href="<%- rootlink %><%- post.path %>">
+            <h2 class="post-title"><%= titlecase(post.title) %></h2>
+        </a>
+    <% } %>
     <div class="category-and-date">
         <% if (post.categories.data.length != 0) { %>
         <span class="category">
