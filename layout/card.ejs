@@ -17,7 +17,13 @@
             <% Object.keys(theme.card.icon_links).forEach(function(key) { %>
             <span class="icon-link">
                 <a href="<%- theme.card.icon_links[key].link %>">
-                    <i class="fa-<%- theme.card.icon_links[key].theme %> fa-<%- theme.card.icon_links[key].name %> fa-fw"></i>
+                    <% if(theme.card.icon_links[key].name){%>
+                        <i class="fa-<%- theme.card.icon_links[key].theme %> fa-<%- theme.card.icon_links[key].name %> fa-fw"></i>
+                    <% }else{%>
+                        <svg style="max-height:.9em;max-width:.9em" >
+                         <use xlink:href="<%- theme.card.icon_links[key].svg %>"></use>
+                        </svg>
+                    <% }%>
                 </a>
             </span>
             <% }); %>
