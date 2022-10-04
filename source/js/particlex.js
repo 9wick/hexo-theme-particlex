@@ -72,9 +72,11 @@ const App = Vue.createApp({
                 menu.className = "hidden-menu";
                 that.menu_show = false;
             } else menu.className = "show-menu";
+            let menuClass = 'menu-color-normal';
             if (document.getElementById("home-posts-wrap"))
                 if (new_local <= window.innerHeight - 100)
-                    menu.className += " menu-color";
+                    menuClass= "menu-color";
+            menu.className += " " + menuClass;
             this.bar_local = new_local;
         },
     },

@@ -700,6 +700,23 @@ pre .copycode {
     box-shadow: 0px -1px 10px 0px rgba(158, 158, 158, 0.302);
     top: 0;
     background: #92cafa;
+
+}
+
+
+#menu.menu-color-normal {
+    background-image: url("/images/theme/top_img.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    box-shadow: 0px -1px 10px 0px rgba(255, 255, 255, 0) !important;
+}
+
+#menu.menu-color-normal .title {
+    color: #fff !important;
+}
+#menu.menu-color-normal a {
+    color: #fff !important;
 }
 #menu .desktop-menu {
     height: 50px;
@@ -779,6 +796,8 @@ pre .copycode {
 .menu-color a {
     color: #fff !important;
 }
+
+
 .content code {
     font-family: "Fira Code", monospace;
     background: rgba(189, 220, 247, 0.42);
@@ -1337,14 +1356,17 @@ footer .footer-icon {
     #menu .phone-menu {
         display: block;
     }
+    #home-head{
+        overflow: hidden;
+    }
     #home-head .home-info {
-        width: 350px;
-        height: 350px;
+        width: min( 80vw, 350px);
+        height: min( 80vw, 350px);
     }
     #home-head .home-info .loop {
         position: absolute;
-        width: 350px;
-        height: 350px;
+        width: min( 80vw, 350px);
+        height: min( 80vw, 350px);
         /*display: none;*/
     }
     #home-head .home-info .info {
@@ -1356,8 +1378,8 @@ footer .footer-icon {
         justify-content: center;
         align-items: center;
         margin: auto;
-        width: 350px;
-        height: 350px;
+        width: min( 80vw, 350px);
+        height: min( 80vw, 350px);
         background: rgba(255, 255, 255, 0.651);
     }
     #home-head .home-info .info .wrap {
