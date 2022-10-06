@@ -705,12 +705,54 @@ pre .copycode {
 
 
 #menu.menu-color-normal {
-    background-image: url("/images/theme/top_img.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     box-shadow: 0px -1px 10px 0px rgba(255, 255, 255, 0) !important;
 }
+
+#home-background{
+}
+
+@media (min-width: 1000px) {
+    #menu.menu-color-normal {
+        background-image: url("/images/theme/top_img.jpg");
+    }
+    #home-background{
+        background-image: url("/images/theme/top_img.jpg");
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    #menu.menu-color-normal {
+        background-image: url("/images/theme/large_top_img.jpg");
+    }
+    #home-background{
+        background-image: url("/images/theme/large_top_img.jpg");
+    }
+
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    #menu.menu-color-normal {
+        background-image: url("/images/theme/medium_top_img.jpg");
+    }
+    #home-background{
+        background-image: url("/images/theme/medium_top_img.jpg");
+    }
+
+}
+
+@media (max-width: 400px) {
+    #menu.menu-color-normal {
+        background-image: url("/images/theme/small_top_img.jpg");
+    }
+    #home-background{
+        background-image: url("/images/theme/small_top_img.jpg");
+    }
+}
+
 
 #menu.menu-color-normal .title {
     color: #fff !important;
